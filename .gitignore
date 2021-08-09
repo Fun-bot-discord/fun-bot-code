@@ -1,0 +1,44 @@
+##########################
+# Application specfic
+##########################
+# config/config.js
+
+##########################
+# General
+##########################
+
+#####
+# OS X temporary files
+#
+.DS_Store
+
+.Trashes
+
+*.swp
+
+#####
+# Node stuff
+#
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+coverage
+
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+build/Release
+
+node_modules
+
+# .env
+.env
