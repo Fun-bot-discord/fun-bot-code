@@ -8,8 +8,15 @@ module.exports = {
   **-** \`f!link\`
   `,
   execute(message, args) {
-    message.channel.send(
-      "https://discord.com/oauth2/authorize?client_id=819212547449290794&scope=bot&permissions=2147483647"
-    );
+    if (args.length === 0) {
+      message.channel.send(
+        "https://discord.com/oauth2/authorize?client_id=819212547449290794&scope=bot&permissions=2147483647"
+      );
+    }
+
+    //help command
+    else if (args[0] === "help") {
+      message.channel.send(this.help);
+    }
   },
 };

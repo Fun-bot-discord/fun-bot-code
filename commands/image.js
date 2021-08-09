@@ -1,6 +1,6 @@
 module.exports = {
   name: "image",
-  description: "This command sends images based on what\'s asked",
+  description: "This command sends images based on what's asked",
   credits: `
 **Cat images** - https://github.com/ThatCopy/catAPI
 **Dog images** - https://dog.ceo/dog-api/
@@ -26,7 +26,7 @@ module.exports = {
       return null;
     }
 
-    //uses 'f!img help'
+    //help command
     else if (args[0] === "help") {
       message.channel.send(this.help);
     }

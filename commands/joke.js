@@ -26,6 +26,11 @@ module.exports = {
     } else if (args[0] === "general" || args[0] === "g") {
       url = "https://official-joke-api.appspot.com/jokes/general/random";
       type = 1;
+    }
+
+    //help command
+    else if (args[0] === "help") {
+      message.channel.send(this.help);
     } else {
       url = "https://official-joke-api.appspot.com/jokes/random";
     }

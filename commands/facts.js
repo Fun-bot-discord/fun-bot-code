@@ -20,12 +20,7 @@ module.exports = {
 
     //uses 'f!fact help'
     else if (args[0] === "help") {
-      message.channel.send(`
-**syntax** - \`f!fact [argument1]\`
-
-\`argument1\`
-    **-** 
-        `);
+      message.channel.send(this.help);
     }
   },
 };

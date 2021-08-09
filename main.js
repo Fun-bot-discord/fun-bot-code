@@ -4,11 +4,12 @@
 const Discord = require("discord.js");
 const request = require("request");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const client = new Discord.Client();
 
 const prefix = process.env.PREFIX;
+console.log(prefix);
 
 const fs = require("fs");
 
@@ -31,8 +32,8 @@ client.once("ready", () => {
   const site_two = "https://djank.herokuapp.com/api/login";
 
   //setInterval(function () {
-    //https.get(site_two);
-    //https.get(site_one);
+  //https.get(site_two);
+  //https.get(site_one);
   //}, 29000);
 
   //tell how many servers it is watching
@@ -48,7 +49,11 @@ client.once("ready", () => {
 });
 
 client.on("message", (message) => {
-  if (!message.content.toLocaleLowerCase().startsWith(prefix) || message.author.bot) return;
+  if (
+    !message.content.toLocaleLowerCase().startsWith(prefix) ||
+    message.author.bot
+  )
+    return;
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
