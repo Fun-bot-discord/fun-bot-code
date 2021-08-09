@@ -1,6 +1,20 @@
 module.exports = {
   name: "joke",
   description: "This command give you random jokes",
+  credits: "https://github.com/15Dkatz/official_joke_api",
+  help: `
+**Usage** -
+ **-** \`f!j [argument1]\` or \`f!joke [argument1]\`
+     (\`argument1\` is **optional**)
+  
+\`argument1\` specifies what you want to see -
+  **1.** if no argument is specified
+    **-** the bot will tell a random joke of either programming or general category 
+  **2.** \`argument1\` is \`general\` or \`g\`
+    **-** the bot will tell jokes **only** from the general category
+  **3.** \`argument1\` is \`programming\` or \`p\`
+    **-** the bot  will tell jokes **only** from the programming category
+  `,
   execute(message, args, request) {
     let category, url;
     let type = 0;

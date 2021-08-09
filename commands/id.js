@@ -1,6 +1,11 @@
 module.exports = {
   name: "id",
-  description: "This tell your user info",
+  description: "This tell your user info (sends a dm to you)",
+  credits: "Me !",
+  help: `
+**Usage** - \`f!id\`
+  (sends your user info to you privately in a dm)
+  `,
   execute(message, args, Discord, bot) {
     //embed
     const botLogo = new Discord.MessageAttachment("./assets/logo.png");

@@ -1,6 +1,23 @@
 module.exports = {
   name: "image",
-  description: "This command sends images based on arguments",
+  description: "This command sends images based on what\'s asked",
+  credits: `
+**Cat images** - https://github.com/ThatCopy/catAPI
+**Dog images** - https://dog.ceo/dog-api/
+**Fox images** - https://github.com/xinitrc-dev/randomfox.ca
+  `,
+  help: `
+**Usage** - \`f!img [argument1]\`
+
+\`argument1\` - specifies what you want to see,
+  **1.** \`cat\` for random *cat* images
+    **-** (only one image at a time)
+  **2.** \`dog\` for random *dog* images
+    **-** can also type a 2nd argument specifying the number of images you want
+      *Example -* \`f!img dog n\` where \`n\` is a number between *1* and *5* (both included)
+  **3.** \`fox\` for random fox images
+    **-** (only one image at a time)
+  `,
   execute(message, args, request) {
     if (args.length === 0) {
       message.channel.send(
@@ -11,18 +28,7 @@ module.exports = {
 
     //uses 'f!img help'
     else if (args[0] === "help") {
-      message.channel.send(`
-**syntax** - \`f!img [argument1]\`
-
-\`argument1\` - specifies what you want to see,
-    **1.** \`cat\` for random *cat* images
-        **-** (only one image at a time)
-    **2.** \`dog\` for random *dog* images
-        **-** can also type a 2nd argument specifying the number of images you want
-          *Example -* \`f!img dog n\` where \`n\` is a number between *1* and *5* (both included)
-    **3.** \`fox\` for random fox images
-        **-** (only one image at a time)
-      `);
+      message.channel.send(this.help);
     }
 
     //uses 'f!img cat'

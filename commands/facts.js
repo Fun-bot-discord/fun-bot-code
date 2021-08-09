@@ -1,6 +1,15 @@
 module.exports = {
   name: "facts",
   description: "This command sends facts on various stuff",
+  credits: `
+
+  `,
+  help: `
+**Usage** - \`f!fact [argument1]\`
+  
+\`argument1\` -
+  **1.** 
+  `,
   execute(message, args, request) {
     if (args.length === 0) {
       message.channel.send(
