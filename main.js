@@ -9,7 +9,6 @@ require("dotenv").config();
 const client = new Discord.Client();
 
 const prefix = process.env.PREFIX;
-console.log(prefix); //debugging .env
 
 const fs = require("fs");
 
