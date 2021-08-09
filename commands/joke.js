@@ -31,6 +31,7 @@ module.exports = {
     //help command
     else if (args[0] === "help") {
       message.channel.send(this.help);
+      return;
     } else {
       url = "https://official-joke-api.appspot.com/jokes/random";
     }

@@ -55,7 +55,7 @@ module.exports = {
       },
     };
 
-    message.react(`👍`);
+    message.react("👍");
     message.author.send({ files: [botLogo], embed: Embed });
   },
 };

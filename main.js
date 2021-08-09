@@ -10,13 +10,13 @@ const client = new Discord.Client();
 
 const prefix = process.env.PREFIX;
 
-const fs = require("fs");
+const readdirSync = require("fs").readdirSync;
 
 client.commands = new Discord.Collection();
 
-const commandFiles = fs
-  .readdirSync("./commands")
-  .filter((file) => file.endsWith(".js"));
+const commandFiles = readdirSync("./commands").filter((file) =>
+  file.endsWith(".js")
+);
 
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
@@ -78,6 +78,13 @@ client.on("message", (message) => {
   //id
   else if (command === "id") {
     client.commands.get("id").execute(message, args, Discord, client);
+  }
+
+  //info
+  else if (command === "info") {
+    client.commands
+      .get("info")
+      .execute(message, args, client.commands, client, Discord);
   }
 
   //djank
