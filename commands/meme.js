@@ -14,7 +14,7 @@ https://github.com/D3vd/Meme_Api
       return;
     }
 
-    url = "https://meme-api.herokuapp.com/gimme/wholesomememes";
+    url = "https://meme-api.herokuapp.com/gimme/";
     const botLogo = new Discord.MessageAttachment("./assets/logo.png");
 
     request(url, { json: true }, (err, res, body) => {
