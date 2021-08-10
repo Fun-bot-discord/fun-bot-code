@@ -18,7 +18,7 @@ module.exports = {
     try {
       commandToBeDescribed = commands.get(commandAsked);
     } catch (error) {
-      message.reply(`
+      message.channel.send(`
 ${commandAsked} isin't a command, maybe you made a typo ?
 If you are __**sure**__ you have made no mistake, take a screen shot of the following line and send it to the dev of this bot, if you don't know who it is, then just leave it. 0_0
 

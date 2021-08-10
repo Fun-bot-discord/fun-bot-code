@@ -87,6 +87,11 @@ client.on("message", (message) => {
       .execute(message, args, client.commands, client, Discord);
   }
 
+  //meme
+  else if (command === "meme" || command === "m") {
+    client.commands.get("meme").execute(message, args, request, Discord);
+  }
+
   //djank
   else if (command === "login") {
     //api = {password: "", username: "", id: "", bot_key:""}

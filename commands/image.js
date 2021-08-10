@@ -29,6 +29,7 @@ module.exports = {
     //help command
     else if (args[0] === "help") {
       message.channel.send(this.help);
+      return;
     }
 
     //uses 'f!img cat'
